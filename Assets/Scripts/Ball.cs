@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-    public float velocity;
+    public Vector3 velocity;
 
     private Rigidbody rigidBody;
     private AudioSource audioSource;
@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody>();
-        rigidBody.velocity = new Vector3(0, 0, velocity);
+        rigidBody.velocity = velocity;
 
         audioSource = GetComponent<AudioSource>();
 	}
